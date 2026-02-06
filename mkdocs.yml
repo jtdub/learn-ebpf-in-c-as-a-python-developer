@@ -1,0 +1,117 @@
+site_name: Learn eBPF in C as a Python Developer
+site_description: A practical guide to C and eBPF for experienced Python developers
+site_url: ""
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.mark
+  - pymdownx.critic
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - tags
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Development Environment: getting-started/dev-environment.md
+      - Hello World: getting-started/hello-world.md
+  - "Part 1: C Fundamentals":
+      - Overview: part1-c-fundamentals/index.md
+      - "Ch 1: Types & Variables": part1-c-fundamentals/ch01-types-and-variables.md
+      - "Ch 2: Pointers & Memory": part1-c-fundamentals/ch02-pointers-and-memory.md
+      - "Ch 3: Structs & Unions": part1-c-fundamentals/ch03-structs-and-unions.md
+      - "Ch 4: Arrays & Strings": part1-c-fundamentals/ch04-arrays-and-strings.md
+      - "Ch 5: Control Flow & Functions": part1-c-fundamentals/ch05-control-flow-and-functions.md
+      - "Ch 6: Bitwise Operations": part1-c-fundamentals/ch06-bitwise-operations.md
+      - "Ch 7: Preprocessor & Macros": part1-c-fundamentals/ch07-preprocessor-and-macros.md
+      - "Ch 8: Networking Structs": part1-c-fundamentals/ch08-networking-structs.md
+      - "Ch 9: Build Tools": part1-c-fundamentals/ch09-build-tools.md
+  - "Part 2: eBPF Fundamentals":
+      - Overview: part2-ebpf-fundamentals/index.md
+      - "Ch 10: What is eBPF?": part2-ebpf-fundamentals/ch10-what-is-ebpf.md
+      - "Ch 11: Program Types": part2-ebpf-fundamentals/ch11-program-types.md
+      - "Ch 12: BPF Maps": part2-ebpf-fundamentals/ch12-bpf-maps.md
+      - "Ch 13: BPF Helpers": part2-ebpf-fundamentals/ch13-bpf-helpers.md
+      - "Ch 14: The Verifier": part2-ebpf-fundamentals/ch14-the-verifier.md
+      - "Ch 15: BCC & Python": part2-ebpf-fundamentals/ch15-bcc-python.md
+      - "Ch 16: libbpf & CO-RE": part2-ebpf-fundamentals/ch16-libbpf-and-co-re.md
+      - "Ch 17: bpftool": part2-ebpf-fundamentals/ch17-bpftool.md
+  - "Part 3: Packet Interception":
+      - Overview: part3-packet-interception/index.md
+      - "Ch 18: Socket Syscalls": part3-packet-interception/ch18-socket-syscalls.md
+      - "Ch 19: Cgroup Hooks": part3-packet-interception/ch19-cgroup-hooks.md
+      - "Ch 20: TC Programs": part3-packet-interception/ch20-tc-programs.md
+      - "Ch 21: XDP Programs": part3-packet-interception/ch21-xdp-programs.md
+      - "Ch 22: Packet Parsing": part3-packet-interception/ch22-packet-parsing.md
+      - "Ch 23: Header Rewriting": part3-packet-interception/ch23-header-rewriting.md
+      - "Ch 24: Traffic Redirection": part3-packet-interception/ch24-traffic-redirection.md
+      - "Ch 25: Socket Filtering": part3-packet-interception/ch25-socket-filtering.md
+  - "Part 4: Observability":
+      - Overview: part4-observability/index.md
+      - "Ch 26: Tracing with Kprobes": part4-observability/ch26-tracing-with-kprobes.md
+      - "Ch 27: Tracepoints": part4-observability/ch27-tracepoints.md
+      - "Ch 28: Perf & Ring Buffers": part4-observability/ch28-perf-and-ring-buffers.md
+      - "Ch 29: Metrics & Histograms": part4-observability/ch29-metrics-and-histograms.md
+      - "Ch 30: Practical Debugging": part4-observability/ch30-practical-debugging.md
+  - "Part 5: Security":
+      - Overview: part5-security/index.md
+      - "Ch 31: eBPF Security Model": part5-security/ch31-ebpf-security-model.md
+      - "Ch 32: LSM Hooks": part5-security/ch32-lsm-hooks.md
+      - "Ch 33: Seccomp-BPF": part5-security/ch33-seccomp-bpf.md
+      - "Ch 34: Hardening": part5-security/ch34-hardening.md
+  - Projects:
+      - Overview: projects/index.md
+      - "01: Syscall Tracer": projects/project01-syscall-tracer/index.md
+      - "02: Packet Counter": projects/project02-packet-counter/index.md
+      - "03: TCP Connect Logger": projects/project03-tcp-connect-logger/index.md
+      - "04: Header Inspector": projects/project04-header-inspector/index.md
+      - "05: Port Redirector": projects/project05-port-redirector/index.md
+      - "06: Connection Tracker": projects/project06-connection-tracker/index.md
+      - "07: Traffic Monitor": projects/project07-traffic-monitor/index.md
+      - "08: Proxy Redirect": projects/project08-proxy-redirect/index.md
+  - Appendix:
+      - Cheatsheet: appendix/cheatsheet.md
+      - Python to C Reference: appendix/python-to-c-reference.md
+      - Resources: appendix/resources.md
